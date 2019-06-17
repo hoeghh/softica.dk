@@ -4,7 +4,7 @@ var ftpDeploy = new FtpDeploy();
 var config = {
     username: process.env.FTP_USERNAME,
     password: process.env.FTP_PASSWORD,
-    host: process.env.FTPHOST,
+    host: process.env.FTP_HOSTNAME,
     port: 21,
     localRoot: __dirname + "/../dist/",
     remoteRoot: "/",
