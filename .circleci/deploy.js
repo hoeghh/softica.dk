@@ -8,7 +8,8 @@ var config = {
     port: 21,
     localRoot: "/home/circleci/project/",
     remoteRoot: "/public_html/",
-    include: ['*']
+    include: ['*'],
+    exclude: ['.git','node_modules','.circleci','package-lock.json']
 }
 
 console.log(config.user + "@" + config.host + ":" + config.port);
