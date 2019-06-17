@@ -6,7 +6,7 @@ var config = {
     password: process.env.FTP_PASSWORD,
     host: process.env.FTP_HOSTNAME,
     port: 21,
-    localRoot: __dirname + "/../dist/",
+    localRoot: __dirname + ".",
     remoteRoot: "/public_html/",
     include: ['*']
 }
