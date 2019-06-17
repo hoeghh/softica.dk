@@ -5,6 +5,7 @@ jobs:
        - image: circleci/node:latest
      steps:
        - checkout
+       - run: pwd
        - run: ls -l
        - run: npm install -D ftp-deploy
        - run: node .circleci/deploy.js
