@@ -10,6 +10,8 @@ var config = {
     remoteRoot: "/public_html/",
     include: ['*']
 }
+
+console.log(config.username + "@" + config.host);
     
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
