@@ -12,6 +12,8 @@ var config = {
 }
 
 console.log(config.user + "@" + config.host + ":" + config.port);
+console.log("localRoot : " + config.localRoot)
+console.log("remoteRoot : " + config.remoteRoot)
     
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
