@@ -12,7 +12,7 @@ var config = {
     forcePasv: true 
 }
 
-console.log(config.username + "@" + config.host + ":" + config.port);
+console.log(config.user + "@" + config.host + ":" + config.port);
     
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
