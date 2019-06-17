@@ -8,7 +8,8 @@ var config = {
     port: 21,
     localRoot: __dirname + ".",
     remoteRoot: "/public_html/",
-    include: ['*']
+    include: ['*'],
+    forcePasv: true 
 }
 
 console.log(config.username + "@" + config.host + ":" + config.port);
