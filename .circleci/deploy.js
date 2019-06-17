@@ -6,7 +6,7 @@ var config = {
     password: process.env.FTP_PASSWORD,
     host: process.env.FTP_HOSTNAME,
     port: 21,
-    localRoot: "/home/circleci/project/",
+    localRoot: "/home/circleci/project/dist/",
     remoteRoot: "/public_html/",
     include: ['*'],
     exclude: ['.git','node_modules','.circleci','package-lock.json']

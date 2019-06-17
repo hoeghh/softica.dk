@@ -4,8 +4,10 @@ jobs:
      docker:
        - image: circleci/node:latest
      steps:
+       - run: mkdir dist
+       - run: cd dist
        - checkout
-       - run: pwd
+       - run: cd ..
        - run: ls -l
        - run: npm install -D ftp-deploy
        - run: node .circleci/deploy.js
