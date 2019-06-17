@@ -11,7 +11,7 @@ var config = {
     include: ['*']
 }
 
-console.log(config.username + "@" + config.host);
+console.log(config.username + "@" + config.host + ":" + config.port);
     
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
