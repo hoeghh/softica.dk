@@ -7,7 +7,6 @@ jobs:
        - checkout
        - run: npm install -D ftp-deploy
        - run: node .circleci/deploy.js
-       - run: echo "WE'RE ONLINE"
 
 workflows:
   version: 2
