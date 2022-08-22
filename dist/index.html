@@ -1,160 +1,354 @@
-<!DOCTYPE html>
-<!-- Template by Quackit.com -->
-<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
-Although you can use them, for a more unique website, replace these images with your own. -->
+<!doctype html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <title>Softica</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Softica.dk</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="css/custom.css" rel="stylesheet">
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
 
-    <link rel="icon" type="image/png" href="/favicon.ico"/>
-    <link rel="icon" type="image/png" href="http://softica.dk/favicon.ico"/>
+    .b-example-divider {
+      height: 2rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-    <!-- Custom Fonts from Google -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="headers.css" rel="stylesheet">
+  <link href="heroes.css" rel="stylesheet">
+  <link href="features.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Logo and responsive toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                	<span class="glyphicon glyphicon-fire"></span> 
-                	SOFTICA
-                </a>
-            </div>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-    </nav>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="twitter" viewBox="0 0 16 16">
+      <path
+        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+      <path
+        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+    </symbol>
+    <symbol id="linkedin" viewBox="0 0 16 16">
+      <path
+        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+    </symbol>
+    <symbol id="deploma" viewBox="0 0 16 16">
+      <path
+        d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z" />
+      <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
+    </symbol>
+    <symbol id="progress" viewBox="0 0 16 16">
+      <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+    </symbol>
+    <symbol id="invest" viewBox="0 0 16 16">
+      <path
+        d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z" />
+      <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+      <path
+        d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2V6zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405z" />
+      <path
+        d="M12 10h-1.783l1.542-1.639c.097-.103.178-.218.241-.34V10zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646zM16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z" />
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </symbol>
+  </svg>
 
-	<!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Grow a learning organization</h1>
-                <p>We empower organizations and help them build a learning organization</p>
-                <a href="contact.html" class="btn btn-primary btn-lg">Contact us</a>
-            </div>
+
+  <main>
+    <div class="container" id="menu">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-2 ">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><img src="logo.png" class="bi me-2" width="40" height="37"></li>
+          <li class="nav-item"><a href="#why" class="nav-link">Why Softica</a></li>
+          <li class="nav-item"><a href="#training" class="nav-link">Training</a></li>
+          <li class="nav-item"><a href="#workshops" class="nav-link">Workshops</a></li>
+          <li class="nav-item"><a href="#leadership" class="nav-link">Lead</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="why">
+      <h1 class="pb-2 border-bottom">Why Softica</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#deploma" />
+            </svg>
+          </div>
+          <h2>Invest</h2>
+          <p>A skill is an investment. Let us help your organization aquire new skills by training.</p>
+          <p>We currently do training within the cloud native space. Contact us for more information.</p>
+          <a href="#training" class="icon-link d-inline-flex align-items-center">
+            Go to trainings
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right" />
+            </svg>
+          </a>
         </div>
-    </header>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#invest" />
+            </svg>
+          </div>
+          <h2>Empower</h2>
+          <p>Workshops are a good way to get a skill put to practise, and learn how to communicate topics. </p>
+          <p>We help facilitate workshops where employees becomes heroes on the big stage.</p>
+          <a href="#workshops" class="icon-link d-inline-flex align-items-center">
+            Go to workshops
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right" />
+            </svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#progress" />
+            </svg>
+          </div>
+          <h2>Lead</h2>
+          <p>The first level of leadership is leading a team, and we can help new leaders getting into this new space.
+          </p>We have leadership mentor programs that will move your employees to the next level.<p>
+          </p>
+          <a href="#leadership" class="icon-link d-inline-flex align-items-center">
+            Go to leadership
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-	<!-- Intro Section -->
-    <section class="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                	<span class="glyphicon glyphicon-apple" style="font-size: 60px"></span>
-                    <h2 class="section-heading">Start building the organization of the future</h2>
-                    <p class="text-light">With more then 20 years of experience in growing a learning culture in big organizations, we are here to help you on that journey.</p>
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="training">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="training.jpeg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="display-5 fw-bold lh-1 mb-3">Training</h2>
+          <p class="lead">We offer training in Cloud-Native technologies. </p>
+          <p class="lead">We have been working with Cloud Native technologies since 2015 from automating, teaching,
+            advising and hosting Kubernetes environments. </p>
+          <p class="lead">If you want master Cloud-Native, contact us for a training offer.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">More info</button>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="#contact" role="button">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="workshops">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="workshop.jpeg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="display-5 fw-bold lh-1 mb-3">Workshops</h2>
+          <p class="lead">We offer workshops in public speaking. </p>
+          <p class="lead">Softica have been performing public talks since 2016, doing international talks at conferences
+            like KubeCon (both regular talks and a keynote) and Atlassian summit twice. </p>
+          <p class="lead">Let us help your employees get on the stage and show their competencies to the world.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">More info</button>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="#contact" role="button">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="leadership">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="leadership.jpeg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="display-5 fw-bold lh-1 mb-3">Team leadership</h2>
+          <p class="lead">Leading people is an artform. </p>
+          <p class="lead">Learn how to lead a team by learning and discussing topics like Promise theory and how it
+            relates to Agile, DevOps and Cloud Native.</p>
+          <p class="lead">You will learn how not to be in the way, and how to unleach the potential of your team. </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">More info</button>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="#contact" role="button">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="contact">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="well well-sm">
+            <form class="form-horizontal" action="" method="post">
+              <fieldset>
+                <h1 class="display-5 fw-bold lh-1 mb-3">Contact us</h1>
+
+                <!-- Name input-->
+                <div class="form-group mt-3">
+                  <label class="col-md-3 control-label" for="name">Name:</label>
+                  <div class="col-md-9">
+                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-	<!-- Content 1 -->
-    <section class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive img-circle center-block" src="images/trainingteam.jpg" alt="">
+                <!-- Email input-->
+                <div class="form-group mt-3">
+                  <label class="col-md-3 control-label" for="email">E-mail:</label>
+                  <div class="col-md-9">
+                    <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                  </div>
                 </div>
-                <div class="col-sm-6">
-                	<h2 class="section-header">Superior Training</h2>
-                	<p class="lead text-muted">We supply some of the best training on the market within Cloud Native, DevOps and scaling organizations. Currently we offer a brand new course in Docker and Kubernetes, helping organizations start their Cloud Native journey. <br><br>Let us guide your employees into the world of containers and orchestration.</p></p>
-                	<a href="contact.html" class="btn btn-primary btn-lg">Contact us</a>
-                </div>                
-                
-            </div>
+
+                <!-- Message body -->
+                <div class="form-group mt-3">
+                  <label class="col-md-3 control-label" for="message">Message:</label>
+                  <div class="col-md-15">
+                    <textarea class="form-control" id="message" name="message"
+                      placeholder="Please enter your message here..." rows="5"></textarea>
+                  </div>
+                </div>
+
+                <!-- Form actions -->
+                <div class="form-group mt-4">
+                  <div class="col-md-12 text-right ">
+                    <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-	<!-- Content 2 -->
-     <section class="content content-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                	<h2 class="section-header">Intense workshops</h2>
-                	<p class="lead text-light">Sometimes a face 2 face workshop is the best way forward. Book a half or full day workshop where our expert will help you and your team on topics like Cloud Native, Agile and DevOps. Our form of unscriptet workshops helps people understand the topics better and can do live Q&A. <br><br>It is informal and down to earth, and you get to deicde the agenda.</p>
-                	<a href="contact.html" class="btn btn-default btn-lg">Contact us</a>
-                </div>    
-                <div class="col-sm-6">
-                    <img class="img-responsive img-circle center-block" src="images/workshop.jpg" alt="">
-                </div>            
-                
-            </div>
+    <div class="b-example-divider "></div>
+
+    <div class="container col-xxl-8 px-4 py-5" id="about">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="hoeghh-talk.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700"
+            height="500" loading="lazy"><a class="nav-link px-2 text-muted" href="https://www.youtube.com/watch?v=NpdHcrakhmo"
+            target="_blank">Link to KubeCon / CloudNativeCon Europe 2022 Keynote</a>
         </div>
-    </section>    
-
-	<!-- Content 3 -->
-     <section class="content content-3">
-        <div class="container">
-			<h2 class="section-header"><span class="glyphicon glyphicon-pushpin text-primary"></span><br> Find the next open date</h2>
-			<p class="lead text-muted">Contact us to find out when we can help you.</p> 
-                    <a href="contact.html" class="btn btn-primary btn-lg">Contact us</a>               
-            </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">About Softica</h1>
+          <p class="lead">Softica is driven by Henrik Høegh who have been working as a consultant for more then 14 years
+            shaping the danish Cloud Native community and helping companies scale and work smarter. </p>
+          <p class="lead">Softica is the place where you can tap into the many years of experience build up by Henrik.
+          </p>
+          <p class="lead">To hear how we can share and help your business, contact us by using the form above.</p>
         </div>
-    </section>
-    
-	<!-- Footer -->
-    <footer class="page-footer">
-    
-        <!-- Copyright etc -->
-        <div class="small-print">
-        	<div class="container">
-        		<p>Copyright &copy; Softica.dk 2021</p>
-        	</div>
-        </div>
-        
-    </footer>
+      </div>
+    </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <div class="b-example-divider"></div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Softica</p>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    
-    <!-- Custom Javascript -->
-    <script src="js/custom.js"></script>
+        <ul class="nav col-md-8 justify-content-end">
+          <li class="nav-item"><a href="#menu" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#why" class="nav-link px-2 text-muted">Why Softica</a></li>
+          <li class="nav-item"><a href="#training" class="nav-link px-2 text-muted">Training</a></li>
+          <li class="nav-item"><a href="#workshops" class="nav-link px-2 text-muted">Workshops</a></li>
+          <li class="nav-item"><a href="#workshops" class="nav-link px-2 text-muted">Workshops</a></li>
+          <li class="nav-item"><a href="#leadership" class="nav-link px-2 text-muted">Lead</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://www.linkedin.com/in/hoeghh/"
+              target="_blank"><svg class="bi" width="24" height="24">
+                <use xlink:href="#linkedin" />
+              </svg></a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-muted"
+              href="https://www.facebook.com/groups/1608828105949565" target="_blank"><svg class="bi" width="24"
+                height="24">
+                <use xlink:href="#facebook" />
+              </svg></a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://twitter.com/HenrikHoegh"
+              target="_blank"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter" />
+              </svg></a></li>
+        </ul>
+      </footer>
+    </div>
+  </main>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
